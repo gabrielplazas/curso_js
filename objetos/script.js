@@ -47,8 +47,17 @@ const serHumano = {
     idade: 40,       
 
     fala() {
-        console.log(`Olá Mundo`);
-    }
+        console.log(`${this.nome} tem ${this.idade} anos.`);
+    },
+
+    incrementaIdade() {
+        this.idade++;
+    }   
+
 };
 
 serHumano.fala();
+serHumano.incrementaIdade();
+serHumano.fala();
+serHumano.incrementaIdade();
+serHumano.fala();   
