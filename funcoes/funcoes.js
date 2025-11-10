@@ -15,5 +15,5 @@ console.log(soma(98, 10));
 function soma2(x, y) {
     console.log(x + y);
 }
-
+// console.log()
 soma2(50, 50);
