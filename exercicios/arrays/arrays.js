@@ -7,7 +7,7 @@ alunos[6]='pedro';
 
 console.log(alunos);
 console.log(alunos.length);
-console.log("----------");
+console.log("----------");   
 // push = adicionar um valor no final do array
 alunos.push('camila');
 console.log(alunos);    
