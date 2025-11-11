@@ -60,4 +60,4 @@ serHumano.fala();
 serHumano.incrementaIdade();
 serHumano.fala();
 serHumano.incrementaIdade();
-serHumano.fala();   
+serHumano.fala();
