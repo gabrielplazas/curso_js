@@ -40,3 +40,33 @@ funcao3(5, 5, 20); //pula o segundo argumento
 funcao3(5, '', 20); //pula o segundo argumento, mas como string vazia é um valor falso, o valor 0 não é atribuído   
 funcao3(5, 0, 20); //pula o segundo argumento, e como é undefined, o valor 0 é atribuído
 funcao3(5, undefined, 20); //pula o segundo argumento, e como é undefined, o valor 0 é atribuído
+
+// argumentos que sustentam todos os argumentos enviados
+function funcao4([valor1, valor2, valor3 ]){
+    console.log(valor1, valor2, valor3);    
+}
+funcao4(['Gabriel', , 30]);
+
+function conta(operador, acumulador = 0, ...numeros){
+         // ... rest operator -> pega o resto dos argumentos e coloca dentro de um array. SEMPRE TEM QUE SER O ÚLTIMO ARGUMENTOs
+         console.log(operador, acumulador, numeros);
+         for(let numero of numeros){
+            // console.log(numero);
+            if (operador === '+') acumulador += numero;
+            if (operador === '-') acumulador -= numero;
+            if (operador === '*') acumulador *= numero;
+            if (operador === '/') acumulador /= numero; 
+         }
+    console.log(acumulador);
+}
+
+conta('+', 20, 30, 40, 50);
+conta('*', 20, 30, 40, 50);
+conta('-', 20, 30, 40, 50);
+conta('/', 100000, 20, 2, 5);
+
+// console.log('----------CONTAS------------');
+// conta('+', 0, 20, 30, 40, 50);
+// conta('*', 1, 20, 30, 40, 50);
+// conta('-', 1000, 20, 30, 40, 50);
+// conta('/', 100000, 20, 2, 5);
